@@ -1,18 +1,8 @@
 
 # coding: utf-8
 
-# ## CNN-Project-Exercise-Solutions
-# We'll be using the CIFAR-10 dataset, which is very famous dataset for image recognition! 
-# 
-# The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. 
-# 
-# The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. 
-# 
-# ### Follow the Instructions in Bold, if you get stuck somewhere, view the solutions video!
 
 # ## Step 0: Get the Data
-# 
-# ** *Note: If you have trouble with this just watch the solutions video. This doesn't really have anything to do with the exercise, its more about setting up your data. Please make sure to watch the solutions video before posting any QA questions.* **
 
 # ** Download the data for CIFAR from here: https://www.cs.toronto.edu/~kriz/cifar.html **
 # 
@@ -154,7 +144,7 @@ plt.imshow(X[4])
 
 # # Helper Functions for Dealing With Data.
 # 
-# ** Use the provided code below to help with dealing with grabbing the next batch once you've gotten ready to create the Graph Session. Can you break down how it works? **
+# ** Using the provided code below to help with dealing with grabbing the next batch once we are gotten ready to create the Graph Session. 
 
 # In[17]:
 
@@ -231,7 +221,7 @@ ch = CifarHelper()
 ch.set_up_images()
 
 # During your session to grab the next batch use this line
-# (Just like we did for mnist.train.next_batch)
+
 # batch = ch.next_batch(100)
 
 
@@ -268,7 +258,7 @@ hold_prob = tf.placeholder(tf.float32)
 
 # ### Helper Functions
 # 
-# ** Grab the helper functions from MNIST with CNN (or recreate them here yourself for a hard challenge!). You'll need: **
+# ** Grab the helper functions from MNIST with CNN. You'll need: **
 # 
 # * init_weights
 # * init_bias
@@ -309,7 +299,7 @@ def normal_full_layer(input_layer, size):
 
 # ### Create the Layers
 # 
-# ** Create a convolutional layer and a pooling layer as we did for MNIST. **
+# ** Create a convolutional layer and a pooling layer. **
 # ** Its up to you what the 2d size of the convolution should be, but the last two digits need to be 3 and 32 because of the 3 color channels and 32 pixels. So for example you could use:**
 # 
 #         convo_1 = convolutional_layer(x,shape=[4,4,3,32])
